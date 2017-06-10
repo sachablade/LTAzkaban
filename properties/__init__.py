@@ -6,6 +6,7 @@ from dateutil.parser import parse
 def read_properties():
     try:
         azkaban_job_prop_file = os.environ["JOB_PROP_FILE"]
+        azkaban_job_out_prop_file = os.environ["JOB_OUTPUT_PROP_FILE"]
     except KeyError:
         return None
 
@@ -22,5 +23,5 @@ def read_properties():
 
     print ('JOB_NAME:%s '%dict['azkaban.job.id'])
 
-    return dict
+    return dict,azkaban_job_out_prop_file
 
