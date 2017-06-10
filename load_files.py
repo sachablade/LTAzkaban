@@ -2,17 +2,15 @@
 import time
 import json
 from properties import read_properties
+from properties import write_properties
 
-properties,out_properties_file=read_properties()
+properties=read_properties()
 print properties
-#time.sleep(60)
-
-print out_properties_file
+time.sleep(20)
 
 json_decoded={}
-json_decoded['ADDED_KEY'] = 'ADDED_VALUE'
+json_decoded['PARAMETROS'] = 'PARAMETRO PASADO ENTRE PROCESOS'
 
-with open(out_properties_file, 'w') as json_file:
-    json.dump(json_decoded, json_file)
+write_properties(json_decoded)
 
 print 'SE HAN CARGADO TODOS LOS FICHEROS'
