@@ -8,3 +8,5 @@ time.sleep(20)
 
 print properties['PARAMETROS']
 print 'SE HAN CARGADO TODOS LOS FICHEROS'
+
+raise Exception('a ver que pasa')
