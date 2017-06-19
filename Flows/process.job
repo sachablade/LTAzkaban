@@ -1,3 +1,5 @@
 type=command
+retries=2
+MIVARIABLE=MIVARIABLE
 command=python -u ${proyect.path}process_files.py
 dependencies=load_files
